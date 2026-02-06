@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sermons | ECHOES OF HIS MERCY MINISTRIES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo.png.jpg" alt="ECHOES OF HIS MERCY MINISTRIES logo">
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pastor.html">Pastor</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="sermons.html">Sermons</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+    </div>
+  </header>
+  <!-- PAGE HERO -->
+  <section class="page-hero fade-in">
+    <div class="page-hero-overlay">
+      <h2>Sermons</h2>
+      <p>Listen, watch, and grow in faith through our teachings</p>
+    </div>
+  </section>
+
+  <!-- SERMONS CONTENT -->
+  <section class="page-content fade-in">
+    <div class="container">
+
+      <h2>Latest Sermons</h2>
+
+      <div class="sermon-cards">
+
+        <div class="card">
+          <h3>Faith in Action</h3>
+          <p><strong>Date:</strong> 12th January 2026</p>
+          <audio controls>
+            <source src="sermon1.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <p><a href="sermon1.mp3" download>Download Sermon</a></p>
+        </div>
+
+        <div class="card">
+          <h3>The Power of Prayer</h3>
+          <p><strong>Date:</strong> 19th January 2026</p>
+          <audio controls>
+            <source src="sermon2.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <p><a href="sermon2.mp3" download>Download Sermon</a></p>
+        </div>
+
+        <div class="card">
+          <h3>Walking in God's Light</h3>
+          <p><strong>Date:</strong> 26th January 2026</p>
+          <audio controls>
+            <source src="sermon3.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+          <p><a href="sermon3.mp3" download>Download Sermon</a></p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 ECHOES OF HIS MERCY MINISTRIES. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FADE-IN SCRIPT -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(fade => observer.observe(fade));
+  </script>
+
+</body>
+</html>

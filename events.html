@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events | ECHOES OF HIS MERCY MINISTRIES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo.png.jpg" alt="ECHOES OF HIS MERCY MINISTRIES logo">
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pastor.html">Pastor</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="sermons.html">Sermons</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero fade-in">
+    <div class="page-hero-overlay">
+      <h2>Events</h2>
+      <p>Join us in our upcoming programs and celebrations</p>
+    </div>
+  </section>
+
+  <!-- EVENTS CONTENT -->
+  <section class="page-content fade-in">
+    <div class="container">
+
+      <h2>Upcoming Events</h2>
+      <p class="section-intro">
+        Stay updated with the latest events happening at PRAYER HOUSE.
+      </p>
+
+      <div class="events-grid">
+
+        <!-- Event 1 -->
+        <div class="event-card">
+          <h3>Annual Thanksgiving Service</h3>
+          <p><strong>Date:</strong> December 25, 2026</p>
+          <p>
+            A special gathering to thank God for His goodness throughout the year.
+          </p>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-card">
+          <h3>Youth Empowerment Seminar</h3>
+          <p><strong>Date:</strong> March 15, 2026</p>
+          <p>
+            Equipping our young members with spiritual and life skills.
+          </p>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-card">
+          <h3>Night of Prayer & Healing</h3>
+          <p><strong>Date:</strong> June 10, 2026</p>
+          <p>
+            A special night dedicated to intercession, healing, and spiritual renewal.
+          </p>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event-card">
+          <h3>Church Anniversary Celebration</h3>
+          <p><strong>Date:</strong> September 20, 2026</p>
+          <p>
+            Celebrating the faithfulness of God and the growth of our church family.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 ECHOES OF HIS MERCY MINISTRIES. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FADE-IN SCRIPT -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(fade => observer.observe(fade));
+  </script>
+
+</body>
+</html>
