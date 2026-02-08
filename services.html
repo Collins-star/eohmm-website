@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Services | ECHOES OF HIS MERCY MINISTRIES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo.png.jpg" alt="ECHOES OF HIS MERCY MINISTRIES logo">
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pastor.html">Pastor</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="sermons.html">Sermons</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero fade-in">
+    <div class="page-hero-overlay">
+      <h2>Our Services</h2>
+      <p>Worship with us and grow in faith</p>
+    </div>
+  </section>
+
+  <!-- SERVICES CONTENT -->
+  <section class="page-content fade-in">
+    <div class="container">
+
+      <h2>Weekly Services</h2>
+
+      <div class="service-cards">
+        <div class="card">
+          <h3>Monday Worship Service</h3>
+          <p><strong>Time:</strong> 5:00 PM - 6:30PM</p>
+          <p>
+            PRAYER CHAMPION
+          </p>
+        </div>
+
+        <h3>Wednesday Worship Service</h3>
+          <p><strong>Time:</strong> 5:00 PM - 6:30PM</p>
+          <p>
+            BIBLE STUDY
+          </p>
+        </div>
+
+        <h3>Thursday Worship Service</h3>
+          <p><strong>Time:</strong> 9:00 AM - 12:30PM</p>
+          <p>
+            HOUR OF SOLUTION
+          </p>
+        </div>
+
+        <h3>Friday Worship Service</h3>
+          <p><strong>Time:</strong> 5:00 PM - 6:30PM</p>
+          <p>
+            REVIVAL HOUR
+          </p>
+        </div>
+
+        <h3>Sunday Worship Service</h3>
+          <p><strong>Time:</strong> 7:00 AM (Worker's meeting), 8:00 AM (Sunday school), 9:00 AM - 11:30 AM (Sunday service)</p>
+        </div>
+
+      <h2>Special Programs</h2>
+
+      <div class="service-cards">
+        <div class="card">
+          <h3>Every First day of the Month 6:00 AM - 7:00 AM</h3>
+          <p>
+            OPEN HEAVEN
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Every First Saturday of the Month 9:00 AM - 12:00 PM</h3>
+          <p>
+            POWER TO SUCCEED
+          </p>
+        </div>
+
+        <div class="service-cards">
+        <div class="card">
+          <h3>Every Third Friday of the Month 10:00 PM - 2:00AM</h3>
+          <p>
+            Night OF ANSWERS
+          </p>
+        </div>
+
+        <div class="card">
+          <h3>Every First Sunday of the Month</h3>
+          <p>
+            Thanksgiving Sunday Service
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 ECHOES OF HIS MERCY MINISTRIES. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FADE-IN SCRIPT -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(fade => observer.observe(fade));
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,706 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Make body take full height */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flex layout for the whole page */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full viewport height */
+}
+
+/* Make main content expand to push footer down */
+main, .about, .services{
+  flex: 1;
+}
+
+body {
+  background: #F8F9FA;
+  color: #333;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+.header {
+  background: rgba(44, 62, 80, 0.9); /* slightly transparent dark blue */
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(5px); /* optional, nice frosted effect */
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header.inner-page .container {
+  justify-content: flex-end; /* menu right on inner pages */
+}
+
+.logo {
+  color: #F8F9FA;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav a {
+  color: #F8F9FA;
+  margin-left: 25px;
+  text-decoration: none;
+  font-weight: 500;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.7); /* subtle shadow */
+}
+
+.nav a:hover {
+  color: #E67E22;
+}
+
+/* Hero Section */
+.hero {
+  background: url('church-hero.jpg') no-repeat center center/cover;
+  color: #fff;
+  padding: 120px 20px;
+  text-align: center;
+  position: relative;
+  min-height: 80vh; /* ensures hero covers most of the screen */
+}
+
+/* Dark overlay for readability */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* adjust opacity if needed */
+  z-index: 0;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* keeps text above overlay */
+}
+
+.hero h2 {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons .btn-primary {
+  background: #E67E22; /* warm gold */
+  color: #fff;
+}
+
+.hero-buttons .btn-primary:hover {
+  background: #c76b1a;
+}
+
+.hero-buttons .btn-secondary {
+  background: #fff;
+  color: #2C3E50;
+}
+
+.hero-buttons .btn-secondary:hover {
+  background: #ddd;
+}
+
+/* Sections */
+section {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.mission, .events, .about, .services, .contact {
+  background: #fff;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  padding: 60px 20px;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+section p, section li {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto 10px auto;
+}
+
+section ul {
+  list-style: none;
+  padding: 0;
+}
+
+section li {
+  margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin: 20px auto;
+}
+
+.contact input, 
+.contact textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.contact button {
+  background: #2C3E50;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.contact button:hover {
+  background: #1a2733;
+}
+
+/* Footer */
+.footer {
+  background: #2C3E50;
+  color: #F8F9FA;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobile / Tablet */
+@media (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+  }
+
+  .nav {
+    margin-top: 10px;
+  }
+
+  .nav a {
+    margin: 10px;
+  }
+
+  .hero h2 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .mission, .events, .about, .services, .contact {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 20px 0;
+  }
+
+  nav a {
+    font-size: 18px;
+    padding: 10px 0;
+  }
+}
+
+.contact form {
+  max-width: 600px;
+  margin: 20px auto 0 auto;
+  text-align: left;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+.contact input:focus,
+.contact textarea:focus {
+  outline: none;
+  border-color: #4322e6;
+  box-shadow: 0 0 5px rgba(34, 34, 230, 0.5);
+}
+
+.contact button {
+  background: #6022e6;
+  color: #ffffff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.contact button:hover {
+  background: #c76b1a;
+  transform: scale(1.05);
+}
+
+/* Pastor Section */
+.pastor-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pastor-photo {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.pastor-bio {
+  max-width: 600px;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Sermons */
+.sermons {
+  padding: 80px 20px;
+}
+
+.sermon-card {
+  max-width: 600px;
+  margin: auto;
+  padding: 25px;
+  border-radius: 8px;
+  background: #f9f9f9;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.sermon-card h3 {
+  margin-bottom: 10px;
+}
+
+.sermon-card audio {
+  width: 100%;
+  margin-top: 15px;
+}
+
+/* Events */
+.events ul {
+  list-style: none;
+  padding: 0;
+}
+
+.events li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+/* Adjust fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Pastor Section */
+.pastor-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+
+.pastor-photo {
+  width: 250px;
+  border-radius: 10px;
+}
+
+.pastor-bio {
+  max-width: 600px;
+  text-align: left;
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 15px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s;
+}
+
+.gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+/* Sermons */
+.sermon-cards .card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.sermon-cards audio,
+.sermon-cards video {
+  width: 100%;
+  margin-top: 10px;
+}
+
+/* Events */
+.events ul {
+  list-style: none;
+  padding: 0;
+}
+
+.events li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 5px;
+}
+
+/* Fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Footer fix */
+.footer {
+  background: #2C3E50;
+  color: #F8F9FA;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+/* Responsive fixes */
+@media(max-width: 768px) {
+  .service-cards,
+  .sermon-cards {
+    flex-direction: column;
+  }
+  .pastor-info {
+    flex-direction: column;
+  }
+}
+
+/* Page Hero */
+.page-hero {
+  background: url('church-hero.jpg') center/cover no-repeat;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page-hero-overlay {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 40px;
+  color: #ffffff;
+  text-align: center;
+  width: 100%;
+}
+
+/* Page Content */
+.page-content {
+  padding: 60px 20px;
+}
+
+.page-content h2 {
+  margin-top: 40px;
+  color: #2C3E50;
+}
+
+.page-content p {
+  line-height: 1.8;
+  margin-top: 10px;
+}
+
+/* Values List */
+.values-list {
+  margin-top: 20px;
+  padding-left: 20px;
+}
+
+.values-list li {
+  margin-bottom: 10px;
+}
+
+/* Active Nav */
+.nav a.active {
+  color: #E67E22;
+  font-weight: bold;
+}
+
+/* Pastor Section Card Style */
+.pastor-page {
+  padding: 80px 0;
+  background-color: #f9f9f9; /* soft background for the entire section */
+}
+
+.pastor-layout {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  background-color: #ffffff; /* card background */
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Image */
+.pastor-image img {
+  width: 220px;
+  height: 280px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Text */
+.pastor-text {
+  max-width: 650px;
+}
+
+.pastor-text h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+  color: #2C3E50;
+}
+
+.pastor-text h3 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #E67E22;
+}
+
+.pastor-text h4 {
+  font-size: 18px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #34495E;
+}
+
+.pastor-text p {
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: left;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .pastor-layout {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .pastor-image img {
+    width: 200px;
+    height: 250px;
+  }
+
+  .pastor-text {
+    max-width: 100%;
+  }
+
+  .pastor-text p {
+    text-align: left;
+  }
+}
+
+/* WhatsApp Button */
+.whatsapp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #25D366;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-bottom: 20px;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.whatsapp-link img {
+  width: 24px;
+  height: 24px;
+}
+
+.whatsapp-link:hover {
+  background-color: #1ebe57;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   GLOBAL MOBILE OPTIMIZATION
+   ========================= */
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 16px;
+    line-height: 1.7;
+  }
+
+  section {
+    padding: 60px 15px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  /* Center content on mobile */
+  .container,
+  .content {
+    width: 100%;
+    padding: 0 15px;
+  }
+}
+
+/* Navbar Logo */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+}
+
+.navbar .logo img {
+  height: 60px; /* Adjust size as needed */
+}
+
+.navbar .nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #2C3E50;
+  font-weight: 500;
+}
+
+.navbar .nav-links a:hover {
+  color: #E67E22;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar .nav-links {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 10px;
+  }
+}

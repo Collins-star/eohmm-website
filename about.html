@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | ECHOES OF HIS MERCY MINISTRIES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo.png.jpg" alt="ECHOES OF HIS MERCY MINISTRIES logo">
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pastor.html">Pastor</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="sermons.html">Sermons</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero fade-in">
+    <div class="page-hero-overlay">
+      <h2>About ECHOES OF HIS MERCY MINISTRIES</h2>
+      <p>Who we are, what we believe, and why we exist</p>
+    </div>
+  </section>
+
+  <!-- ABOUT CONTENT -->
+  <section class="page-content fade-in">
+    <div class="container">
+      
+      <h2>Who We Are</h2>
+      <p>
+        ECHOES OF HIS MERCY MINISTRIES is a Christ-centered church devoted to prayer, worship,
+        and the teaching of God’s Word. We are a family of believers committed
+        to spiritual growth, love, and service to humanity.
+      </p>
+
+      <h2>Our Mission</h2>
+      <p>
+        To raise a praying people who walk in faith, live in obedience to God’s
+        Word, and impact their communities positively through love and service.
+      </p>
+
+      <h2>Our Vision</h2>
+      <p>
+        To be a spiritual home where lives are transformed, destinies are
+        restored, and God’s presence is experienced through prayer and worship.
+      </p>
+
+      <h2>Our Core Values</h2>
+      <ul class="values-list">
+        <li>Prayer and Spiritual Growth</li>
+        <li>Biblical Teaching</li>
+        <li>Love and Unity</li>
+        <li>Service to Humanity</li>
+        <li>Faith and Integrity</li>
+      </ul>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 ECHOES OF HIS MERCY MINISTRIES. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FADE-IN SCRIPT -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(fade => observer.observe(fade));
+  </script>
+
+</body>
+</html>

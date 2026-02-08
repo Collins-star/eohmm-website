@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ECHOES OF HIS MERCY MINISTRIES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo.png.jpg" alt="ECHOES OF HIS MERCY MINISTRIES logo">
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pastor.html">Pastor</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="sermons.html">Sermons</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero fade-in">
+    <div class="hero-overlay">
+      <div class="hero-content">
+        <h2>Welcome to ECHOES OF HIS MERCY MINISTRIES</h2>
+        <p>A place of worship, prayer, and spiritual growth.</p>
+
+        <div class="hero-buttons">
+          <a href="services.html" class="btn-primary">Join Our Service</a>
+          <a href="contact.html" class="btn-secondary">Contact Us</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHORT ABOUT PREVIEW -->
+  <section class="home-about fade-in">
+    <div class="container">
+      <h2>About ECHOES OF HIS MERCY MINISTRIES</h2>
+      <p>
+        ECHOES OF HIS MERCY MINISTRIES is a Christ-centered church committed to prayer, the teaching
+        of God’s word, and building a strong spiritual community.
+      </p>
+
+      <a href="about.html" class="btn-primary">Read More</a>
+    </div>
+  </section>
+
+  <!-- SERVICE TIMES -->
+  <section class="home-services fade-in">
+    <div class="container">
+      <h2>Service Times</h2>
+
+      <div class="service-cards">
+        <div class="card">
+          <h3>Sunday Worship</h3>
+          <p>10:00 AM</p>
+        </div>
+
+        <div class="card">
+          <h3>Midweek Prayer</h3>
+          <p>Wednesday – 6:00 PM</p>
+        </div>
+      </div>
+
+      <a href="services.html" class="btn-secondary">View All Services</a>
+    </div>
+  </section>
+
+  <!-- LATEST SERMON PREVIEW -->
+  <section class="home-sermon fade-in">
+    <div class="container">
+      <h2>Latest Sermon</h2>
+
+      <p><strong>Theme:</strong> Walking in Faith</p>
+
+      <audio controls>
+        <source src="sample-sermon.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+      <br /><br />
+      <a href="sermons.html" class="btn-primary">View All Sermons</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 ECHOES OF HIS MERCY MINISTRIES. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FADE-IN SCRIPT -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    faders.forEach(fade => observer.observe(fade));
+  </script>
+
+</body>
+</html>

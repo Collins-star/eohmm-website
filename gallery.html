@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | ECHOES OF HIS MERCY MINISTRIES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+ <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo.png.jpg" alt="ECHOES OF HIS MERCY MINISTRIES logo">
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pastor.html">Pastor</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="sermons.html">Sermons</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero fade-in">
+    <div class="page-hero-overlay">
+      <h2>Gallery</h2>
+      <p>Moments of worship, fellowship, and celebration</p>
+    </div>
+  </section>
+
+  <!-- GALLERY CONTENT -->
+  <section class="page-content fade-in">
+    <div class="container gallery-section">
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <img src="gallery1.jpg.jpg" alt="Church Event 1" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery5.jpg.jpg" alt="Church Event 5" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery6.jpg.jpg" alt="Church Event 6" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery9.jpg.JPG" alt="Church Event 7" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery10.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery11.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery13.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery14.jpg.JPG" alt="Church Event 2" />
+        </div>
+      <div class="gallery-item">
+          <img src="gallery15.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery17.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery18.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery19.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery20.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery21.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery22.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery23.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery26.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery28.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery29.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery30.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery31.jpg.JPG" alt="Church Event 2" />
+        </div>
+        <div class="gallery-item">
+          <img src="gallery32.jpg.JPG" alt="Church Event 2" />
+        </div>
+        </div> 
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 ECHOES OF HIS MERCY MINISTRIES. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FADE-IN SCRIPT -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(fade => observer.observe(fade));
+  </script>
+
+</body>
+</html>

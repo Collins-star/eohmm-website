@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pastor | ECHOES OF HIS MERCY MINISTRIES</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER / NAVIGATION -->
+  <nav class="navbar">
+  <a href="index.html" class="logo">
+    <img src="logo.png.jpg" alt="ECHOES OF HIS MERCY MINISTRIES logo">
+  </a>
+
+  <div class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="pastor.html">Pastor</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="sermons.html">Sermons</a>
+    <a href="events.html">Events</a>
+    <a href="contact.html">Contact</a>
+  </div>
+</nav>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero fade-in">
+    <div class="page-hero-overlay">
+      <h2>Meet Our Pastor</h2>
+      <p>Guiding our congregation with faith and wisdom</p>
+    </div>
+  </section>
+
+  <!-- PASTOR CONTENT -->
+ <section class="pastor-page fade-in">
+  <div class="container pastor-layout">
+
+    <div class="pastor-image">
+  <img src="pastor.jpg" alt="Pastor of ECHOES OF HIS MERCY MINISTRIES">
+</div>
+
+    <div class="pastor-text">
+  <h2>Pastor Ade Adesuyi</h2>
+  <h3>Senior Pastor, ECHOES OF HIS MERCY MINISTRIES</h3>
+
+  <p>
+    Pastor Ade Adesuyi is a devoted servant of God with a divine calling to lead, teach, and inspire the congregation of ECHOES OF HIS MERCY MINISTRIES. With years of ministry experience, he has remained committed to spreading the Word of God with passion, wisdom, and integrity.
+  </p>
+
+  <h4>Ministry & Vision</h4>
+  <p>
+    His ministry is centered on prayer, faithful teaching of the Scriptures, and guiding believers toward spiritual growth. Pastor Ade Adesuyi envisions a church where individuals are empowered to live victorious Christian lives and actively serve the community with love and compassion.
+  </p>
+
+  <h4>Commitment to the Congregation</h4>
+  <p>
+    Through tireless dedication, mentorship, and pastoral care, Pastor Ade Adesuyi continues to nurture spiritual growth and encourage a culture of prayer, fellowship, and service. His leadership fosters a welcoming environment where faith, hope, and love thrive.
+  </p>
+
+  <h4>Impact & Legacy</h4>
+  <p>
+    Under his guidance, ECHOES OF HIS MERCY MINISTRIES has grown into a vibrant spiritual community, impacting lives, strengthening families, and inspiring individuals to deepen their relationship with God. Pastor Ade Adesuyi’s legacy is one of humility, dedication, and unwavering faith.
+  </p>
+</div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 ECHOES OF HIS MERCY MINISTRIES. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- FADE-IN SCRIPT -->
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+    faders.forEach(fade => observer.observe(fade));
+  </script>
+
+</body>
+</html>
